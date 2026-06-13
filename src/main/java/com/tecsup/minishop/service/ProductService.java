@@ -14,12 +14,12 @@ public class ProductService {
     }
 
     public Product save(Product product) {
-        if (product.getPrice() <= 0) {
+        // Refactorización: Validaciones compactas en una sola línea
+        if (product.getPrice() <= 0)
             throw new IllegalArgumentException("El precio debe ser mayor a cero");
-        }
-        if (product.getStock() < 0) {
+        if (product.getStock() < 0)
             throw new IllegalArgumentException("El stock no puede ser negativo");
-        }
+
         return productRepository.save(product);
     }
 
