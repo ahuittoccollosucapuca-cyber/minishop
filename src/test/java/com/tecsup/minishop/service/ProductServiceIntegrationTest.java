@@ -43,7 +43,7 @@ class ProductServiceIntegrationTest {
 
         // Assert (Verificar usando AssertJ en consistencia con tu código)
         assertThat(result.getId()).isEqualTo(1L);
-        assertThat(result.getName()).isEqualTo("Auriculares Sony ROTOS INTENCIONALMENTE");
+        assertThat(result.getName()).isEqualTo("Auriculares Sony");
         verify(productRepository, times(1)).save(any(Product.class));
     }
 
