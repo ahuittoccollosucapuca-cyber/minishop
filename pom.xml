@@ -6,7 +6,8 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.5.14</version>
-        <relativePath/> </parent>
+        <relativePath/> 
+    </parent>
     <groupId>com.tecsup</groupId>
     <artifactId>minishop</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -124,6 +125,12 @@
                         <goals>
                             <goal>report</goal>
                         </goals>
+                        <configuration>
+                            <formats>
+                                <format>XML</format>
+                                <format>HTML</format>
+                            </formats>
+                        </configuration>
                     </execution>
                     <execution>
                         <id>jacoco-check</id>
